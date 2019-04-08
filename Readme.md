@@ -4,7 +4,7 @@
 ```
 mkdir esdata   (to hold the elasticsearch data)
 ELASTIC_VERSION=6.5.2 docker-compose up       (will set up the ELK stack in you host)
-docker-compose down        (shutdown the stack)
+ELASTIC_VERSION=6.5.2 docker-compose down        (shutdown the stack)
 ```
 
 
