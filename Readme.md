@@ -10,18 +10,18 @@ docker-compose down        (shutdown the stack)
 
 ## Components and config files :
 ### logstash:
-./config/logstash/*  contains all the files requried by logstash container
-./config/logstash/pipeline/     -  create config files for logs that needs to be processed by logstash
-./config/logstash/logstash.yml  and ./config/logstash/pipeline.yml      -   logstash main configuration files
+**./config/logstash/** -->  contains all the files requried by logstash container
+**./config/logstash/pipeline/**    -->   create config files for logs that needs to be processed by logstash
+**./config/logstash/logstash.yml  and ./config/logstash/pipeline.yml**     -->    logstash main configuration files
 
 ### elasticsearch:
   The other containers will only start if the health check of the elasticsearch container is healthy. If this container fails for some reason everything else will fail as well
 
-./config/elasticsearch/elasticsearch.yml    -  main config files of elasticsearch which is mounted into the container
+**./config/elasticsearch/elasticsearch.yml**    -->  main config files of elasticsearch which is mounted into the container
 
 
 ### kibana:
-./config/kibana/kibana.yml    -  main config files of kibana which is mounted into the container
+**./config/kibana/kibana.yml**    -->  main config files of kibana which is mounted into the container
 
 
 ### NGINX:
