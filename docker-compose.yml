@@ -47,10 +47,10 @@ services:
     volumes:
       - ./config/logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./config/logstash/pipeline:/usr/share/logstash/config/conf.d
-      - ./config/logstash/pipeline.yml:/usr/share/logstash/config/pipeline.yml
-      - ./config/logstash/samplelog.log:/usr/share/logstash/samplelog.log
+      - ./config/logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml
     ports:
       - "5400:5400"
+      - "9600:9600"
     environment:
       - "LS_JAVA_OPTS=-Xmx256m -Xms256m"
     networks:
@@ -66,4 +66,3 @@ volumes:
 networks:
   elk-stack:
     driver: bridge
-
