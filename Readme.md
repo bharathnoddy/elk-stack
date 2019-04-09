@@ -6,6 +6,16 @@ mkdir esdata   (to hold the elasticsearch data or use any other location)
 ELASTIC_VERSION=6.5.2 docker-compose up       (will set up the ELK stack in you host)
 ELASTIC_VERSION=6.5.2 docker-compose down        (shutdown the stack)
 ```
+
+
+## Access Kibana
+```
+http://<HOSTIP>:5601     (usually this port is not opened for all  and traffic is routed via NGINX)
+or via Nginx
+https://<HOSTIP>       (username/password   :  admin/admin)
+```
+
+
 ##Container:
 ```
 --Logstash
@@ -48,12 +58,4 @@ pip install elasticsearch-curator
 --Schedule this to run every day
 ```
 ##0 8 * * * root curator ./config/curator/delete_index.yml --config  ./config/curator/curator.yml
-```
-
-
-## Access Kibana
-```
-http://<HOSTIP>:5601     (usually this port is not opened for all  and traffic is routed via NGINX)
-or via Nginx
-https://<HOSTIP>
 ```
